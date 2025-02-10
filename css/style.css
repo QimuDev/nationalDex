@@ -146,6 +146,7 @@ p {
 
 .dexNumberContainer {
   height: 3rem;
+  width: 23.9%;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -153,7 +154,7 @@ p {
 }
 
 .dexNumber {
-  margin-right: 2.3vw;
+  margin-right: ;
   font-size: x-large;
   color: #f5f5f5;
 }

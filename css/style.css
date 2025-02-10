@@ -79,6 +79,7 @@ p {
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-right: 30%;
   background-color: #ff4444;
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
@@ -100,7 +101,7 @@ p {
 
 .pokemonNameContainer {
   height: 100%;
-  width: 10rem;
+  width: 43%;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -262,7 +263,7 @@ p {
   opacity: 0;
 }
 
-.genStamp p{
+.genStamp p {
   font-weight: bold;
   color: #2d2d2d;
 }
@@ -292,4 +293,11 @@ p {
     transition: none;
   }
 
+  .pokemonIconContainer {
+    width: 20%;
+  }
+
+  .pokemonIcon {
+    width: 40%;
+  }
 }

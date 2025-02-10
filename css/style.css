@@ -173,7 +173,7 @@ p {
 
 .dexSprite {
   height: 45%;
-  width: 68%;
+  width: 60%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -191,13 +191,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #19ff80;
   border-radius: 0.5rem;
 }
 
 .dexTypes {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .pokemonMeasures {
@@ -210,7 +209,7 @@ p {
 }
 
 .measures {
-  height: 90%;
+  height: 100%;
   width: 63.7%;
   display: flex;
   flex-direction: column;
@@ -244,7 +243,7 @@ p {
 
 .lineBar {
   height: 0.4rem;
-  width: 3.8rem;
+  width: 30%;
   display: flex;
   justify-content: center;
   background-color: #b4b4b4;

@@ -52,11 +52,55 @@ document.addEventListener("DOMContentLoaded", function() {
                                 styleType(type, typeContainer);
                             });
 
+                            const heightText = document.getElementById("heightText");
+                            heightText.textContent = "Height";
+
+                            const weightText = document.getElementById("weightText");
+                            weightText.textContent = "Weight";
+
+                            const lineBars = document.querySelectorAll(".lineBar");
+                            lineBars.forEach(lineBar => {
+                                lineBar.style.opacity = "1";
+                            });
+                            
                             const dexHeight = document.getElementById("dexHeight");
                             dexHeight.textContent = pokemonInfo.height + "m";
 
                             const dexWeight = document.getElementById("dexWeight");
                             dexWeight.textContent = pokemonInfo.weight + "kg";
+
+                            const genStamp = document.querySelector(".genStamp");
+                            genStamp.style.opacity = "1";
+
+                            const genStampText = document.getElementById("genStampText");
+
+                            if (pokemonId >= 1 & pokemonId <= 151){
+                                genStampText.textContent = "Gen 1";
+                            }
+                            else if (pokemonId >= 152 & pokemonId <= 251 ){ 
+                                genStampText.textContent = "Gen 2";
+                            }
+                            else if (pokemonId >= 252 & pokemonId <= 386 ){ 
+                                genStampText.textContent = "Gen 3";
+                            }
+                            else if (pokemonId >= 387 & pokemonId <= 493 ){ 
+                                genStampText.textContent = "Gen 4";
+                            }
+                            else if (pokemonId >= 494 & pokemonId <= 649 ){ 
+                                genStampText.textContent = "Gen 5";
+                            }
+                            else if (pokemonId >= 650 & pokemonId <= 721 ){ 
+                                genStampText.textContent = "Gen 6";
+                            }
+                            else if (pokemonId >= 722 & pokemonId <= 809 ){ 
+                                genStampText.textContent = "Gen 7";
+                            }
+                            else if (pokemonId >= 810 & pokemonId <= 898 ){ 
+                                genStampText.textContent = "Gen 8";
+                            }
+                            else if (pokemonId >= 899 & pokemonId <= 1025 ){ 
+                                genStampText.textContent = "Gen 9";
+                            }
 
                             let pokemonCry = new Audio(pokemonInfo.cry);
                             pokemonCry.play();

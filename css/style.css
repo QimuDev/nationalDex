@@ -146,11 +146,11 @@ p {
 
 .dexNumberContainer {
   height: 3rem;
+  width: 5.3rem;
   display: flex;
   justify-content: start;
   align-items: center;
   margin-left: 1rem;
-  margin-right: 11.7%;
 }
 
 .dexNumber {
@@ -248,13 +248,23 @@ p {
   justify-content: center;
   background-color: #b4b4b4;
   border-radius: 0.8rem;
+  opacity: 0;
 }
 
-.extraInfo {
-  height: 4.3rem;
-  width: 4.3rem;
-  background-color: rgb(180, 180, 180);
+.genStamp {
+  height: 3.8rem;
+  width: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5.3px solid #6d6d6d;
   border-radius: 50%;
+  opacity: 0;
+}
+
+.genStamp p{
+  font-weight: bold;
+  color: #2d2d2d;
 }
 
 @media screen and (max-width: 768px) {

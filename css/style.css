@@ -39,7 +39,7 @@ p {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.23);
-  border-radius: 2.3rem;
+  border-radius: 3.8rem;
   background-color: transparent;
   background-image: linear-gradient(to right, #ff4444 50%, transparent 50%);
   background-position: right;

@@ -114,58 +114,59 @@ document.addEventListener("DOMContentLoaded", function() {
     function styleType(type, typeContainer) {
         switch (type) {
             case "bug":
-                typeContainer.style.backgroundColor = "#A8B820"; 
+                typeContainer.style.backgroundColor = "#A6B91A"; 
                 break;
             case "dark":
-                typeContainer.style.backgroundColor = "#705848"; 
+                typeContainer.style.backgroundColor = "#705746"; 
                 break;
             case "dragon":
-                typeContainer.style.backgroundColor = "#7038F8"; 
+                typeContainer.style.backgroundColor = "#6F35FC"; 
                 break;
             case "electric":
-                typeContainer.style.backgroundColor = "#F8D030"; 
+                typeContainer.style.backgroundColor = "#F7D02C"; 
                 break;
             case "fairy":
-                typeContainer.style.backgroundColor = "#EE99AC"; 
+                typeContainer.style.backgroundColor = "#D685AD"; 
                 break;
             case "fighting":
-                typeContainer.style.backgroundColor = "#C03028"; 
+                typeContainer.style.backgroundColor = "#C22E28"; 
                 break;
             case "fire":
-                typeContainer.style.backgroundColor = "#F08030"; 
+                typeContainer.style.backgroundColor = "#EE8130"; 
                 break;
             case "flying":
-                typeContainer.style.backgroundColor = "#A890F0"; 
+                typeContainer.style.backgroundColor = "#A98FF3"; 
                 break;
             case "ghost":
-                typeContainer.style.backgroundColor = "#705898"; 
+                typeContainer.style.backgroundColor = "#735797"; 
                 break;
             case "grass":
-                typeContainer.style.backgroundColor = "#78C850"; 
+                typeContainer.style.backgroundColor = "#7AC74C"; 
                 break;
             case "ground":
-                typeContainer.style.backgroundColor = "#E0C068"; 
+                typeContainer.style.backgroundColor = "#E2BF65"; 
                 break;
             case "ice":
-                typeContainer.style.backgroundColor = "#98D8D8"; 
+                typeContainer.style.backgroundColor = "#96D9D6"; 
                 break;
             case "poison":
-                typeContainer.style.backgroundColor = "#A040A0"; 
+                typeContainer.style.backgroundColor = "#A33EA1"; 
                 break;
             case "psychic":
-                typeContainer.style.backgroundColor = "#F85888"; 
+                typeContainer.style.backgroundColor = "#F95587"; 
                 break;
             case "rock":
-                typeContainer.style.backgroundColor = "#B8A038"; 
+                typeContainer.style.backgroundColor = "#B6A136"; 
                 break;
             case "steel":
-                typeContainer.style.backgroundColor = "#B8B8D0"; 
+                typeContainer.style.backgroundColor = "#B7B7CE"; 
                 break;
             case "water":
-                typeContainer.style.backgroundColor = "#6890F0"; 
+                typeContainer.style.backgroundColor = "#6390F0"; 
                 break;
             default:
                 typeContainer.style.backgroundColor = "#68A090"; 
         }
     }
+    
 });

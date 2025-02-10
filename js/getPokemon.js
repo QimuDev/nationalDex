@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 typeContainer.appendChild(typeText);
                                 typeText.textContent = type.charAt(0).toUpperCase() + type.slice(1);
 
-                                styleType(type, typeContainer, typeText);
+                                styleType(type, typeContainer);
                             });
 
                             const heightText = document.getElementById("heightText");
@@ -74,33 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                             const genStampText = document.getElementById("genStampText");
 
-                            if (pokemonId >= 1 & pokemonId <= 151){
-                                genStampText.textContent = "Gen 1";
-                            }
-                            else if (pokemonId >= 152 & pokemonId <= 251 ){ 
-                                genStampText.textContent = "Gen 2";
-                            }
-                            else if (pokemonId >= 252 & pokemonId <= 386 ){ 
-                                genStampText.textContent = "Gen 3";
-                            }
-                            else if (pokemonId >= 387 & pokemonId <= 493 ){ 
-                                genStampText.textContent = "Gen 4";
-                            }
-                            else if (pokemonId >= 494 & pokemonId <= 649 ){ 
-                                genStampText.textContent = "Gen 5";
-                            }
-                            else if (pokemonId >= 650 & pokemonId <= 721 ){ 
-                                genStampText.textContent = "Gen 6";
-                            }
-                            else if (pokemonId >= 722 & pokemonId <= 809 ){ 
-                                genStampText.textContent = "Gen 7";
-                            }
-                            else if (pokemonId >= 810 & pokemonId <= 898 ){ 
-                                genStampText.textContent = "Gen 8";
-                            }
-                            else if (pokemonId >= 899 & pokemonId <= 1025 ){ 
-                                genStampText.textContent = "Gen 9";
-                            }
+                            stampGen(pokemonId);
 
                             let pokemonCry = new Audio(pokemonInfo.cry);
                             pokemonCry.play();
@@ -111,18 +85,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    function styleType(type, typeContainer, typeText) {
+    function styleType(type, typeContainer) {
         switch (type) {
             case "bug":
                 typeContainer.style.backgroundColor = "#A6B91A"; 
                 break;
             case "dark":
                 typeContainer.style.backgroundColor = "#705746";
-                typeText.style.color = "white" ;
                 break;
             case "dragon":
                 typeContainer.style.backgroundColor = "#6F35FC"; 
-                typeText.style.color = "white" ;
                 break;
             case "electric":
                 typeContainer.style.backgroundColor = "#F7D02C"; 
@@ -132,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             case "fighting":
                 typeContainer.style.backgroundColor = "#C22E28";
-                typeText.style.color = "white" ; 
                 break;
             case "fire":
                 typeContainer.style.backgroundColor = "#EE8130"; 
@@ -142,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             case "ghost":
                 typeContainer.style.backgroundColor = "#735797"; 
-                typeText.style.color = "white" ;
                 break;
             case "grass":
                 typeContainer.style.backgroundColor = "#7AC74C"; 
@@ -155,11 +125,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             case "poison":
                 typeContainer.style.backgroundColor = "#A33EA1"; 
-                typeText.style.color = "white" ;
                 break;
             case "psychic":
                 typeContainer.style.backgroundColor = "#F95587"; 
-                typeText.style.color = "white" ;
                 break;
             case "rock":
                 typeContainer.style.backgroundColor = "#B6A136"; 
@@ -172,6 +140,36 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             default:
                 typeContainer.style.backgroundColor = "#68A090"; 
+        }
+    }
+
+    function stampGen (pokemonId){
+        if (pokemonId >= 1 & pokemonId <= 151){
+            genStampText.textContent = "Gen 1";
+        }
+        else if (pokemonId >= 152 & pokemonId <= 251 ){ 
+            genStampText.textContent = "Gen 2";
+        }
+        else if (pokemonId >= 252 & pokemonId <= 386 ){ 
+            genStampText.textContent = "Gen 3";
+        }
+        else if (pokemonId >= 387 & pokemonId <= 493 ){ 
+            genStampText.textContent = "Gen 4";
+        }
+        else if (pokemonId >= 494 & pokemonId <= 649 ){ 
+            genStampText.textContent = "Gen 5";
+        }
+        else if (pokemonId >= 650 & pokemonId <= 721 ){ 
+            genStampText.textContent = "Gen 6";
+        }
+        else if (pokemonId >= 722 & pokemonId <= 809 ){ 
+            genStampText.textContent = "Gen 7";
+        }
+        else if (pokemonId >= 810 & pokemonId <= 898 ){ 
+            genStampText.textContent = "Gen 8";
+        }
+        else if (pokemonId >= 899 & pokemonId <= 1025 ){ 
+            genStampText.textContent = "Gen 9";
         }
     }
     

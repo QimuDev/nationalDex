@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
                             const category = categoryData.genera.find(entry => entry.language.name === "en").genus;
                             
                             const pokemonInfo = {
-                                name: data.name,
+                                name: data.name,   
                                 category: category,
-                                sprite: `https://play.pokemonshowdown.com/sprites/ani/${data.name}.gif`,
+                                sprite: `https://play.pokemonshowdown.com/sprites/ani/${data.name.replace(/-/g, '')}.gif`, 
                                 types: data.types.map(typeInfo => typeInfo.type.name),
                                 height: data.height / 10,
                                 weight: data.weight / 10,
-                                cry: `https://pokemoncries.com/cries/${pokemonId}.mp3` 
+                                cry: `https://pokemoncries.com/cries/${pokemonId}.mp3`
                             };
 
                             const dexNumber = document.getElementById("dexNumber");

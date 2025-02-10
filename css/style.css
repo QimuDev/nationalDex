@@ -273,6 +273,7 @@ p {
   }
 
   .mainContainer {
+    width: 96.71vw;
     justify-content: center;
     margin: 0;
   }
@@ -283,11 +284,12 @@ p {
   }
 
   .pokemonList {
-    width: 90vw;
+    width: 83vw;
   }
 
   .pokemonItem {
     width: 100%;
     transition: none;
   }
+
 }

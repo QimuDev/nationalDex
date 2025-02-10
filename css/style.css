@@ -299,8 +299,13 @@ p {
     margin-right: 8%;
   }
 
+  .pokemonIcon{
+    height: 50%;
+    width: 50%;
+  }
+
   .pokemonNumber{
-    font-size: x-small;
+    font-size: small;
   }
 
   .pokemonName{

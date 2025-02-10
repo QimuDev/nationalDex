@@ -146,11 +146,11 @@ p {
 
 .dexNumberContainer {
   height: 3rem;
-  width: 5.3rem;
   display: flex;
   justify-content: start;
   align-items: center;
   margin-left: 1rem;
+  margin-right: 11.7%;
 }
 
 .dexNumber {

@@ -295,11 +295,15 @@ p {
 
   .pokemonIconContainer {
     margin-right: 0;
-    width: 8rem;
-    margin-right: 8%;
+    width: 9rem;
+    margin-right: 15%;
   }
 
   .pokemonNumber{
     font-size: small;
+  }
+
+  .pokemonName{
+    font-size: large
   }
 }

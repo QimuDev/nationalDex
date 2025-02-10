@@ -87,7 +87,7 @@ p {
 
 .pokemonIcon {
   height: 100%;
-  width: 50%;
+  width: 38%;
   display: flex;
   background-position-x: center;
   background-repeat: no-repeat;
@@ -294,10 +294,16 @@ p {
   }
 
   .pokemonIconContainer {
-    width: 20%;
+    margin-right: 0;
+    width: 7rem;
+    margin-right: 15%;
   }
 
   .pokemonIcon {
-    width: 40%;
+    width: 50%;
+  }
+
+  .pokemonNumber{
+    font-size: small;
   }
 }

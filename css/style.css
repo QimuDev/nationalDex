@@ -304,6 +304,6 @@ p {
   }
 
   .pokemonName{
-    font-size: large
+    font-size: medium;
   }
 }

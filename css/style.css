@@ -34,7 +34,7 @@ p {
 }
 
 .pokemonItem {
-  height: 9vh;
+  height: 9.1vh;
   width: 82%;
   display: flex;
   justify-content: space-between;
@@ -46,15 +46,6 @@ p {
   background-size: 200% 100%;
   transition: width 0.3s ease;
   cursor: pointer;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .pokemonItem:hover {
@@ -126,7 +117,7 @@ p {
   mask-image: url("../img/pokeBall.svg");
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: 3.8rem;
+  mask-size: 3rem;
 }
 
 .pokemonInfo {

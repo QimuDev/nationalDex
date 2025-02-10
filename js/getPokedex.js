@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => ({
             id: data.id,
-            name: data.name,
+            name: data.name.replace(/-(.{4,})$/, ''),
             smallSprite: data.sprites.versions['generation-viii'].icons.front_default
         }))
     );

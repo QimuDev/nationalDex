@@ -130,7 +130,6 @@ p {
   align-items: center;
   position: fixed;
   top: 50%;
-
   right: 3.8rem;
   transform: translateY(-50%);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.23);
@@ -193,6 +192,10 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
+}
+
+.typeContainer p {
+  font-weight: 600;
 }
 
 .dexTypes {
@@ -299,11 +302,11 @@ p {
     margin-right: 3%;
   }
 
-  .pokemonNumber{
+  .pokemonNumber {
     font-size: small;
   }
 
-  .pokemonName{
+  .pokemonName {
     font-size: medium;
   }
 }

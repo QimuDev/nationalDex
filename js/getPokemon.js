@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
                         .then(categoryData => {
 
                             const category = categoryData.genera.find(entry => entry.language.name === "en").genus;
-                            
+
                             const pokemonInfo = {
-                                name: data.name,   
+                                name: data.name.replace(/-(.{4,})$/, ''), 
                                 category: category,
-                                sprite: `https://play.pokemonshowdown.com/sprites/ani/${data.name.replace(/-/g, '')}.gif`, 
+                                sprite: `https://play.pokemonshowdown.com/sprites/ani/${data.name.replace(/-.{4,}$/, '').replace(/-/g, '')}.gif`,
                                 types: data.types.map(typeInfo => typeInfo.type.name),
                                 height: data.height / 10,
                                 weight: data.weight / 10,
                                 cry: `https://pokemoncries.com/cries/${pokemonId}.mp3`
                             };
-
+                            
                             const dexNumber = document.getElementById("dexNumber");
                             dexNumber.textContent = `No.${pokemonId}`;
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 typeContainer.appendChild(typeText);
                                 typeText.textContent = type.charAt(0).toUpperCase() + type.slice(1);
 
-                                styleType(type, typeContainer);
+                                styleType(type, typeContainer, typeText);
                             });
 
                             const heightText = document.getElementById("heightText");
@@ -111,16 +111,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    function styleType(type, typeContainer) {
+    function styleType(type, typeContainer, typeText) {
         switch (type) {
             case "bug":
                 typeContainer.style.backgroundColor = "#A6B91A"; 
                 break;
             case "dark":
-                typeContainer.style.backgroundColor = "#705746"; 
+                typeContainer.style.backgroundColor = "#705746";
+                typeText.style.color = "white" ;
                 break;
             case "dragon":
                 typeContainer.style.backgroundColor = "#6F35FC"; 
+                typeText.style.color = "white" ;
                 break;
             case "electric":
                 typeContainer.style.backgroundColor = "#F7D02C"; 
@@ -129,7 +131,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 typeContainer.style.backgroundColor = "#D685AD"; 
                 break;
             case "fighting":
-                typeContainer.style.backgroundColor = "#C22E28"; 
+                typeContainer.style.backgroundColor = "#C22E28";
+                typeText.style.color = "white" ; 
                 break;
             case "fire":
                 typeContainer.style.backgroundColor = "#EE8130"; 
@@ -139,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             case "ghost":
                 typeContainer.style.backgroundColor = "#735797"; 
+                typeText.style.color = "white" ;
                 break;
             case "grass":
                 typeContainer.style.backgroundColor = "#7AC74C"; 
@@ -151,9 +155,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             case "poison":
                 typeContainer.style.backgroundColor = "#A33EA1"; 
+                typeText.style.color = "white" ;
                 break;
             case "psychic":
                 typeContainer.style.backgroundColor = "#F95587"; 
+                typeText.style.color = "white" ;
                 break;
             case "rock":
                 typeContainer.style.backgroundColor = "#B6A136"; 

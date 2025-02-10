@@ -95,7 +95,7 @@ p {
 
 .pokemonIcon {
   height: 100%;
-  width: 4.5rem;
+  width: 50%;
   display: flex;
   background-position-x: center;
   background-position-y: -12px;
@@ -122,17 +122,17 @@ p {
 
 .pokeBallIcon {
   height: 100%;
-  width: 4.5rem;
+  width: 10%;
   background-color: #ff4444;
   mask-image: url("../img/pokeBall.svg");
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: 3rem;
+  mask-size: 3.8rem;
 }
 
 .pokemonInfo {
   height: 69vh;
-  width: 23.6vw;
+  width: 23rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -240,13 +240,13 @@ p {
 }
 
 .heightContainer,
-.weightContainer{
+.weightContainer {
   width: 3.8rem;
   justify-content: start;
 }
 
 .dexHeightContainer,
-.dexWeightContainer{
+.dexWeightContainer {
   width: 3rem;
   justify-content: end;
 }

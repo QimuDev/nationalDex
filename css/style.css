@@ -34,7 +34,7 @@ p {
 }
 
 .pokemonItem {
-  height: 9.1vh;
+  height: 4.5rem;
   width: 82%;
   display: flex;
   justify-content: space-between;
@@ -87,7 +87,7 @@ p {
 
 .pokemonIcon {
   height: 100%;
-  width: 38%;
+  width: 4.5rem;
   display: flex;
   background-position-x: center;
   background-repeat: no-repeat;
@@ -295,12 +295,8 @@ p {
 
   .pokemonIconContainer {
     margin-right: 0;
-    width: 7rem;
-    margin-right: 15%;
-  }
-
-  .pokemonIcon {
-    width: 50%;
+    width: 8rem;
+    margin-right: 8%;
   }
 
   .pokemonNumber{

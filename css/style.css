@@ -131,8 +131,8 @@ p {
 }
 
 .pokemonInfo {
-  height: 30rem;
-  width: 23rem;
+  height: 69vh;
+  width: 23.6vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     pokemonList.addEventListener("click", function(event) {
         const pokemonItem = event.target.closest(".pokemonItem");
-        if (pokemonItem) {
+        if (pokemonItem && !pokemonItem.classList.contains(".selected")) {
             const pokemonId = pokemonItem.dataset.pokemonId;
 
             fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)

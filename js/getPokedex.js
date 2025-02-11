@@ -1,10 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pokemonList = document.getElementById("pokemonList");
     const genButtons = document.querySelectorAll("#genButton");
+    let genButtonSelected = null; 
 
     genButtons.forEach(genButton => {
-        genButton.addEventListener("click", () => getPokedexGen(genButton, pokemonList));
+        genButton.addEventListener("click", () => {
+            if (genButtonSelected) {
+                genButtonSelected.classList.remove("selected");
+            }
+            genButton.classList.add("selected");
+            genButtonSelected = genButton;
+            getPokedexGen(genButton, pokemonList);
+        });
     });
+
+    const firstGenButton = genButtons[0];
+    if (firstGenButton) {
+        firstGenButton.click(); 
+    }
 });
 
 function getPokedexGen(genButton, pokemonList) {
@@ -75,6 +88,6 @@ function getPokedexGen(genButton, pokemonList) {
         if (firstPokemonItem) {
             firstPokemonItem.click(); 
         }
-        
+
     }).catch(error => console.error("Error al buscar Pokémon:", error));
 }

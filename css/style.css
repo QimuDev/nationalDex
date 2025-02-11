@@ -336,7 +336,7 @@ p {
 
 @media screen and (max-width: 768px) {
   .pokemonInfo {
-    height: 60vh;
+    height: 59vh;
     width: 75vw;
     top: 50vh;
     left: 50vw;

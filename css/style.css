@@ -54,6 +54,7 @@ h1 {
 .genSelect button.selected {
   background-color: #ff4444;
   color: #f5f5f5;
+  pointer-events: none;
 }
 
 h2,
@@ -108,6 +109,7 @@ p {
 .pokemonItem.selected {
   width: 100%;
   color: #f5f5f5;
+  pointer-events: none;
   animation: backgroundFill 0.5s forwards;
 }
 
@@ -177,8 +179,8 @@ p {
 .pokemonInfoContainer {
   height: 100vh;
   width: 100vw;
+  display: none;
   position: fixed;
-  z-index: -1;
   top: 0;
   left: 0;
 }
@@ -197,7 +199,6 @@ p {
   background-color: #f5f5f5;
   border-radius: 1.5rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.23);
-  z-index: 2;
 }
 
 .pokemonNumberNameContainer {
@@ -239,7 +240,23 @@ p {
 .pokemonNumberNameContainerSupport {
   height: 3rem;
   width: 3rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   margin-right: 1rem;
+}
+
+.exitButton{
+  all: unset;
+  height: 2.3rem;
+  width: 2.3rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 53px;
+  color:#f5f5f5;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .dexSprite {
@@ -344,19 +361,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .pokemonInfoContainer {
-    z-index: 1; 
-    backdrop-filter: blur(2px);
-  }
-  
-  .pokemonInfo {
-    height: 59vh;
-    width: 75vw;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-  }
-
   .mainContainer {
     width: 100vw;
     justify-content: center;
@@ -395,6 +399,18 @@ p {
     transition: none;
   }
 
+  .pokemonInfoContainer {
+    backdrop-filter: blur(3px);
+  }
+
+  .pokemonInfo {
+    height: 59vh;
+    width: 75vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+  }
+
   .pokemonIconContainer {
     margin-right: 0;
     width: 8.3rem;
@@ -409,8 +425,13 @@ p {
     font-size: medium;
   }
 
+  .exitButton {
+    display: flex;
+  }
+
   .dexSprite {
     height: 38%;
     width: 53%;
   }
+  
 }

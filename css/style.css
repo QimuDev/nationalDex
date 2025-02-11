@@ -5,6 +5,8 @@ body {
   margin: 0;
   font-family: "Poppins";
   background-color: #f5f5f5;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .header {
@@ -19,11 +21,10 @@ h1 {
 }
 
 .genSelect {
-  width: 36.37%;
+  width: 38%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 18%;
 }
 
 .genSelect button {
@@ -348,7 +349,7 @@ p {
   }
 
   .genSelect {
-    width: 68vw; 
+    width: 83vw; 
     display: flex;
     justify-content: space-evenly; 
     align-items: center;

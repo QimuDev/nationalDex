@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const firstGenButton = genButtons[0];
-    if (firstGenButton) {
-        firstGenButton.click(); 
+    const lastGenButton = genButtons[genButtons.length - 1];
+    if (lastGenButton) {
+        lastGenButton.click(); 
     }
 });
 

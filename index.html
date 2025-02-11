@@ -19,19 +19,23 @@
   <body>
     <div class="header">
       <h1>National Pokédex</h1>
-    <div class="genSelect">
-      <div class="gen1"><button>1</button></div>
-      <div class="gen2"><button>2</button></div>
-      <div class="gen3"><button>3</button></div>
-      <div class="gen4"><button>4</button></div>
-      <div class="gen5"><button>5</button></div>
-      <div class="gen6"><button>6</button></div>
-      <div class="gen7"><button>7</button></div>
-      <div class="gen8"><button>8</button></div>
-      <div class="gen9"><button>9</button></div>
-      <div class="gen0"><button>All</button></div>
+      <div class="genSelect">
+        <div>
+          <button id="genButton" data-b="1" data-e="1025">
+            <img src="/img/asteriskIcon.svg" alt="" />
+          </button>
+        </div>
+        <div><button id="genButton" data-b="1" data-e="151">1</button></div>
+        <div><button id="genButton" data-b="152" data-e="251">2</button></div>
+        <div><button id="genButton" data-b="252" data-e="386">3</button></div>
+        <div><button id="genButton" data-b="387" data-e="493">4</button></div>
+        <div><button id="genButton" data-b="494" data-e="649">5</button></div>
+        <div><button id="genButton" data-b="650" data-e="721">6</button></div>
+        <div><button id="genButton" data-b="722" data-e="809">7</button></div>
+        <div><button id="genButton" data-b="810" data-e="905">8</button></div>
+        <div><button id="genButton" data-b="906" data-e="1025">9</button></div>
+      </div>
     </div>
-  </div>
     <div class="mainContainer" id="mainContainer">
       <div class="pokemonList" id="pokemonList"></div>
       <div class="pokemonInfo" id="pokemonInfo">
@@ -46,8 +50,7 @@
         </div>
         <p id="dexCategory"></p>
         <div class="dexSprite" id="dexSprite"></div>
-        <div class="dexTypes" id="dexTypes">
-        </div>
+        <div class="dexTypes" id="dexTypes"></div>
         <div class="pokemonMeasures">
           <div class="measures">
             <div class="measure">

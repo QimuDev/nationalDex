@@ -1,20 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pokemonList = document.getElementById("pokemonList");
-    pokemonList.innerHTML = "";
+    const genButtons = document.querySelectorAll("#genButton");
 
+    genButtons.forEach(genButton => {
+        genButton.addEventListener("click", () => getPokedexGen(genButton, pokemonList));
+    });
+});
+
+function getPokedexGen(genButton, pokemonList) {
     let pokemonSelected = null;
 
+    let b = parseInt(genButton.dataset.b);
+    let e = parseInt(genButton.dataset.e);
+
+    pokemonList.innerHTML = "";
+
     const pokemonPromises = [];
-    
-    for (let i = 1; i <= 1025; i++) {
-        pokemonPromises.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)    
-        .then(response => response.json())
-        .then(data => ({
-            id: data.id,
-            name: data.name.replace(/-(.{4,})$/, ''),
-            smallSprite: data.sprites.versions['generation-viii'].icons.front_default
-        }))
-    );
+
+    for (let i = b; i <= e; i++) {
+        pokemonPromises.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+            .then(response => response.json())
+            .then(data => ({
+                id: data.id,
+                name: data.name.replace(/-(.{4,})$/, ''),
+                smallSprite: data.sprites.versions['generation-viii'].icons.front_default
+            }))
+        );
     }
 
     Promise.all(pokemonPromises).then(pokemons => {
@@ -24,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
             pokemonItem.classList.add("pokemonItem");
             pokemonList.appendChild(pokemonItem);
 
-            const pokemonIconContainer = document.createElement("div")
-            pokemonIconContainer.classList.add("pokemonIconContainer")
-            pokemonItem.appendChild(pokemonIconContainer)
+            const pokemonIconContainer = document.createElement("div");
+            pokemonIconContainer.classList.add("pokemonIconContainer");
+            pokemonItem.appendChild(pokemonIconContainer);
 
             const pokemonIcon = document.createElement("div");
             pokemonIcon.classList.add("pokemonIcon");
@@ -38,9 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
             pokemonNumber.textContent = `No.${pokemon.id}`;
             pokemonIconContainer.appendChild(pokemonNumber);
 
-            const pokemonNameContainer = document.createElement("div")
-            pokemonNameContainer.classList.add("pokemonNameContainer")
-            pokemonItem.appendChild(pokemonNameContainer)
+            const pokemonNameContainer = document.createElement("div");
+            pokemonNameContainer.classList.add("pokemonNameContainer");
+            pokemonItem.appendChild(pokemonNameContainer);
 
             const pokemonName = document.createElement("p");
             pokemonName.classList.add("pokemonName");
@@ -59,6 +70,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 pokemonSelected = pokemonItem;
             });
         });
+
+        const firstPokemonItem = pokemonList.querySelector(".pokemonItem");
+        if (firstPokemonItem) {
+            firstPokemonItem.click(); 
+        }
         
     }).catch(error => console.error("Error al buscar Pokémon:", error));
-});
+}

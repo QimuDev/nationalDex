@@ -177,8 +177,6 @@ p {
 }
 
 .pokemonInfoContainer {
-  height: 100vh;
-  width: 100vw;
   display: none;
   position: fixed;
   top: 0;
@@ -400,6 +398,8 @@ p {
   }
 
   .pokemonInfoContainer {
+    height: 100vh;
+    width: 100vw;
     backdrop-filter: blur(3px);
   }
 
@@ -429,6 +429,13 @@ p {
     display: flex;
   }
 
+  .dexNumber {
+    font-size: large;
+  }
+
+  .dexName {
+    font-size: x-large;
+  }
   .dexSprite {
     height: 38%;
     width: 53%;

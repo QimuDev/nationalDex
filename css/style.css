@@ -174,14 +174,13 @@ p {
   mask-size: 3rem;
 }
 
-.pokemonInfoContainer{
+.pokemonInfoContainer {
   height: 100vh;
   width: 100vw;
   position: fixed;
+  z-index: -1;
   top: 0;
   left: 0;
-  backdrop-filter: blur(4px);
-  z-index: 1;
 }
 
 .pokemonInfo {
@@ -345,6 +344,11 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .pokemonInfoContainer {
+    z-index: 1; 
+    backdrop-filter: blur(2px);
+  }
+  
   .pokemonInfo {
     height: 59vh;
     width: 75vw;

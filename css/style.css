@@ -183,10 +183,12 @@ p {
   align-items: center;
   position: fixed;
   top: 50%;
-  right: 38%;
+  right: 3.8rem;
   transform: translateY(-50%);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.23);
+  background-color: #f5f5f5;
   border-radius: 1.5rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.23);
+  z-index: 1;
 }
 
 .pokemonNumberNameContainer {
@@ -334,7 +336,9 @@ p {
 
 @media screen and (max-width: 768px) {
   .pokemonInfo {
-    display: none;
+    height: 75%;
+    width: 75%;
+    right: 10.9%;
   }
 
   .mainContainer {
@@ -358,11 +362,11 @@ p {
   }
 
   .genSelect {
-    width: 83vw; 
+    width: 83vw;
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-bottom: 1.2rem;
   }
 

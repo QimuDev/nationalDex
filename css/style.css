@@ -394,4 +394,9 @@ p {
   .pokemonName {
     font-size: medium;
   }
+
+  .dexSprite {
+    height: 38%;
+    width: 53%;
+  }
 }

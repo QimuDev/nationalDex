@@ -174,6 +174,16 @@ p {
   mask-size: 3rem;
 }
 
+.pokemonInfoContainer{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
 .pokemonInfo {
   height: 69vh;
   width: 23.9vw;

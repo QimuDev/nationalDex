@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             });
                             
                             let pokemonCry = new Audio(pokemonInfo.cry);
+                            pokemonCry.volume = 0.1;
                             pokemonCry.play();
                         })
                         .catch(error => console.error("Error al obtener la categoría:", error));

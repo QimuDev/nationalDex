@@ -7,22 +7,18 @@ body {
   background-color: #f5f5f5;
 }
 
-.navBar{
-  width: 55.73vw;
-  display: flex;
-}
-
-.genSelect{
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
 h1 {
   font-size: 38px;
-  width: 50%;
-  margin: 1.6rem 2.45rem 1.5rem 3.8rem;
+  margin: 1.5rem 0 0 3.8rem;
+}
+
+.genSelect{
+  width:24.8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0 1.7rem 3.8rem;
 }
 
 h2,

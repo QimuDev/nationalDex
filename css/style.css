@@ -336,8 +336,8 @@ p {
 
 @media screen and (max-width: 768px) {
   .pokemonInfo {
-    height: 60vh;
-    width: 83vw;
+    height: 53vh;
+    width: 75vw;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
